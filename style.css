@@ -1,1 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+ /* background: linear-gradient(180deg, rgb(115, 175, 214) 10%, rgb(236, 149, 222) 100%);*/
+ background-color:rgb(255, 180, 226) ;
+
+}
+
+#navigation {
+  margin-bottom: 24px;
+}
+
+#navigation .link {
+  padding: 24px;
+}
+
+#navigation .link:hover {
+  background-color: rgb(255, 174, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: rgb(226, 20, 20) 3px 3px 3px;
+}
+
+.urun img {
+  width: 80%;
+  max-width: 240px;
+}
+h1{
+  text-shadow: rgb(255, 255, 255) 3px 3px 3px;
+}
 
