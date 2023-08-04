@@ -1,5 +1,5 @@
 document.getElementById("canta").style.display = "none";
-function showProduct(nr) {
+function produktAnzeigen(nr) {
   if (nr === 1) {
     document.getElementById("paket").style.display = "block";
     document.getElementById("canta").style.display = "none";
@@ -17,6 +17,7 @@ function initPayPalButton() {
       color: 'gold',
       layout: 'vertical',
       label: 'buynow',
+      
     },
 
     createOrder: function(data, actions) {
@@ -27,7 +28,7 @@ function initPayPalButton() {
 
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('Thank you for purchasing a high-quality product, ' + details.payer.name.given_name + '!');
+        alert('Teşekürler kaliteli bir ürün aldığına hiç şüphen olmasın! ' + details.payer.name.given_name + '!');
       });
     },
 
@@ -35,24 +36,24 @@ function initPayPalButton() {
       console.log(err);
     }
   }).render('#paypal-button-paket');
-
   paypal.Buttons({
     style: {
       shape: 'pill',
       color: 'gold',
       layout: 'vertical',
       label: 'buynow',
+      
     },
 
     createOrder: function(data, actions) {
       return actions.order.create({
-        purchase_units: [{"description":"bag","amount":{"currency_code":"EUR","value":1}}]
+        purchase_units: [{"description":"canta","amount":{"currency_code":"EUR","value":1}}]
       });
     },
 
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('Thank you for purchasing a high-quality product, ' + details.payer.name.given_name + '!');
+        alert('You are welcome, there should be no doubt that you have purchased a high-quality produc! ' + details.payer.name.given_name + '!');
       });
     },
 
