@@ -28,7 +28,7 @@ function initPayPalButton() {
 
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('Teşekürler kaliteli bir ürün aldığına hiç şüphen olmasın! ' + details.payer.name.given_name + '!');
+        alert('Thank you, rest assured that you have purchased a high-quality product! ' + details.payer.name.given_name + '!');
       });
     },
 
@@ -53,7 +53,7 @@ function initPayPalButton() {
 
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
-        alert('You are welcome, there should be no doubt that you have purchased a high-quality produc! ' + details.payer.name.given_name + '!');
+        alert('Thank you, rest assured that you have purchased a high-quality product! ' + details.payer.name.given_name + '!');
       });
     },
 
